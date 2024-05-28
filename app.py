@@ -126,10 +126,10 @@ with tab2:
 
     st.header("BDD IMDB DATAVIZ")
     st.divider()
-    graph_1 = chemin / "graph_1.png"
-    graph_2 = chemin / "graph_2.png"
-    graph_3 = chemin / "graph_3.png"
-    graph_4 = chemin / "graph_4.png"
+    graph_1 = str(chemin / "graph_1.png")
+    graph_2 = str(chemin / "graph_2.png")
+    graph_3 = str(chemin / "graph_3.png")
+    graph_4 = str(chemin / "graph_4.png")
     st.image(graph_1)
     st.divider()
     st.image(graph_2)
