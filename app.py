@@ -23,9 +23,10 @@ intro_text = """
 Hi! \n
 I'm NADER Mehdi-Michel, and this is my second python project for my Data analyst Bootcamp at Wild Code School.  \n
 This app recommends nearby movies based on a user's choice of a movie .\n
-You can filter (or not) by "genre" to refine recommendations \n
-I gathered movie data from IMDB and TMDB.\n
-The project involvs exploratory data analysis on movies, visualized by graphs\n
+You can chose the range of the recommandations \n
+You have the choice to filter or not by "genre" to refine recommendations \n
+I gathered movie data from IMDB and TMDB using pandas to clean and merge the datasets.\n
+The project involves exploratory data analysis on datasets, visualized by graphs\n
 If you're curious about the code and want to explore it, feel free to visit my Github account! [GitHub](https://github.com/mmnader44/MovieFinder)\n
 """
 st.sidebar.markdown(intro_text)
