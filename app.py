@@ -103,7 +103,7 @@ with tab1:
                     ][0]
                 else:
                     user_index_filtre = user_index
-
+            
                 st.write("You chose:")
                 choix = user_input
                 st.image(
@@ -183,9 +183,15 @@ with tab3:
     st.pyplot(fig)
 
     # Corrélation entre la durée et la note moyenne des films
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.scatterplot(data=df, x='runtimeMinutes', y='averageRating', hue='startYear', ax=ax)
-    ax.set_title('Corrélation entre la durée et la note moyenne des films')
-    ax.set_xlabel('Durée (minutes)')
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    # Créer un dataframe pour les genres en les explosant
+    genre_df = df.assign(genre=df['genres'].str.split(',')).explode('genre')
+
+    # graph
+    sns.boxplot(data=genre_df, x='genre', y='averageRating', ax=ax)
+    ax.set_title('Distribution des notes moyennes par genre')
+    ax.set_xlabel('Genre')
     ax.set_ylabel('Note moyenne')
+    ax.tick_params(axis='x', rotation=45)  # Rotation des étiquettes de l'axe Xpour la lisibilité
     st.pyplot(fig)
