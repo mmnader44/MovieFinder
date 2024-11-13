@@ -34,11 +34,11 @@ st.sidebar.markdown(intro_text)
 
 # Interface utilisateur Streamlit
 st.markdown(
-    "<h1 style='color: black ; text-align: center;'>MOVIE FINDER</h1>",
+    "<h1 style='color: white ; text-align: center;'>MOVIE FINDER</h1>",
     unsafe_allow_html=True,
 )
 st.markdown(
-    "<h2 style='color: black ; text-align: center;'>Based on IMDB and TMDB database</h2>",
+    "<h2 style='color: white ; text-align: center;'>Based on IMDB and TMDB database</h2>",
     unsafe_allow_html=True,
 )
 
