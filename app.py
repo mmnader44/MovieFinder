@@ -117,7 +117,7 @@ with tab1:
                 st.write(f"Synopsys : {df.loc[user_index, 'overview']}")
                 st.write("\n")
 
-                modelNN = NearestNeighbors(n_neighbors=nb)
+                modelNN = NearestNeighbors(n_neighbors=nb, metric='cosine')
                 modelNN.fit(tfidf_matrix_filtre)
                 _, indices = modelNN.kneighbors(tfidf_matrix_filtre[user_index_filtre])
 
